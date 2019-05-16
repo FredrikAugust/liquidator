@@ -1,12 +1,6 @@
-import pytest
+#!/usr/bin/env python3.7
+
 import json
-from app import app_factory
-
-
-@pytest.fixture
-async def cli(loop, aiohttp_client):
-    app = await app_factory()
-    return await aiohttp_client(app)
 
 
 async def test_log_in_successful(cli):
