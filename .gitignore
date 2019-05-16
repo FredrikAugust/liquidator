@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# RSA keys
+*jwtRS256.*
+
 # C extensions
 *.so
 

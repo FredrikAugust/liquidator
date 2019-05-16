@@ -9,13 +9,14 @@ services:
   - mysql
 
 before_install:
-  - mysql -e 'CREATE DATABASE test;'
+  - mysql -e 'CREATE DATABASE dev-test;'
 
 install:
-  - cd ./server/src
+  - cd ./server
   - openssl genrsa -out jwtRS256.key 2048
   - openssl rsa -in jwtRS256.key -outform PEM -out jwtRS256.key.pub
   - pip install -r requirements.txt
 
 script:
-  - pytest
+  - python init_db.py
+  - pytest -vv
