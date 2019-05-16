@@ -5,11 +5,9 @@ from aiohttp import web
 from pymysql import MySQLError
 from jwt import InvalidTokenError
 from logzero import logger
-from handlers.responses import bad_request_response, bad_creds_response, missing_body_keys_response
-
-from database.database import get_engine
-from database.models import user, user_company
-from utils.auth import check_password, create_jwt, verify_jwt
+from liquidator_server.handlers.responses import bad_request_response, bad_creds_response, missing_body_keys_response
+from liquidator_server.database.models import user, user_company
+from liquidator_server.utils.auth import check_password, create_jwt, validate_jwt
 
 
 async def log_in(request):
@@ -20,7 +18,7 @@ async def log_in(request):
         return await missing_body_keys_response()
 
     try:
-        engine = get_engine()
+        engine = request.app['db']
         conn = await engine.acquire()
         query_user = (sa.select([user], use_labels=True).select_from(user).where(user.c.email == body['email']))
         result = await conn.execute(query_user)
