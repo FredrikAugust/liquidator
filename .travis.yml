@@ -8,8 +8,6 @@ python:
 services:
   - mysql
 
-before_install:
-  - mysql -e 'CREATE DATABASE dev-test;'
 
 install:
   - cd ./server
