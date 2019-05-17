@@ -13,7 +13,13 @@ install:
   - openssl genrsa -out server/jwtRS256.key 2048
   - openssl rsa -in server/jwtRS256.key -pubout -outform PEM -out server/jwtRS256.key.pub
   - pip install -r server/requirements.txt
+  - pip install pytest
+  - pip install pytest-cov
+  - pip install coveralls
 
 script:
   - python server/init_db.py
   - make test
+
+after_success:
+  - coveralls
