@@ -10,9 +10,8 @@ services:
 
 
 install:
-  - cd ./server
-  - openssl genrsa -out jwtRS256.key 2048
-  - openssl rsa -in jwtRS256.key -pubout -outform PEM -out jwtRS256.key.pub
+  - openssl genrsa -out server/jwtRS256.key 2048
+  - openssl rsa -in server/jwtRS256.key -pubout -outform PEM -out server/jwtRS256.key.pub
   - pip install -r requirements.txt
 
 script:
