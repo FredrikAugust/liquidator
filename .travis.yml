@@ -17,4 +17,4 @@ install:
 
 script:
   - python init_db.py
-  - pytest -vv
+  - make test
