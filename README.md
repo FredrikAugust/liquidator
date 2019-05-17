@@ -1,3 +1,3 @@
 # Liquidator 
 
-[![Build Status](https://travis-ci.com/KaizerTilt/liquidator.svg?branch=develop)](https://travis-ci.com/KaizerTilt/liquidator)
+[![Build Status](https://travis-ci.com/KaizerTilt/liquidator.svg?branch=master)](https://travis-ci.com/KaizerTilt/liquidator)
