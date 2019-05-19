@@ -2,4 +2,4 @@ clean:
 		@rm -fr `find . -name __pycache__`
 
 test-server:
-		cd server && pytest
+		cd server && tox-travis
