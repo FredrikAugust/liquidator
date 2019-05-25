@@ -61,7 +61,7 @@ const RaisedButton = styled.button<IButtonProps>`
 
   outline: 0;
 
-  border-radius: 2px;
+  border-radius: 3px;
 
   /* CSS variable declaration */
   --bg: ${(props) => props.invertedBg || props.inverted ? 'black' : 'white'};
