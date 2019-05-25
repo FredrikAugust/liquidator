@@ -5,3 +5,5 @@ You can run this project in development mode with `npm start`, and you can build
 ## Notes
 
 For developing with styled-components, I recommend using the `vscode-styled-components`-extension, as it gives you syntax highlighting when writing the css.
+
+Run `npm run storybook` to browse the available components.

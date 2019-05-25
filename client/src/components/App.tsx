@@ -15,9 +15,11 @@ const App: React.FC = () => (
   <>
     <GlobalStyle />
     <TestSpace>
-      <Button>Sign up</Button>
+      <Button.Raised>Sign up</Button.Raised>
+      <Button.Raised invertedBg>Sign up</Button.Raised>
     </TestSpace>
     <h1>Welcome to Liquidator.</h1>
+    <Button.Raised inverted>Sign up</Button.Raised>
   </>
 );
 
