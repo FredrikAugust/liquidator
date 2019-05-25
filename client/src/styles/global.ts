@@ -6,6 +6,8 @@ import { createGlobalStyle } from 'styled-components';
  */
 
 const GlobalStyle = createGlobalStyle`
+    @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:300,400&display=swap');
+
     * {
         margin: 0;
         padding: 0;
